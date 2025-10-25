@@ -1,0 +1,33 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+img {
+  width: 80%;
+}
+p {
+  color: #EEEEEE;
+  font-size: 2rem;
+}
+button {
+  margin-top: 20px;
+  background-color: #00ADB5;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 56rem;
+}
