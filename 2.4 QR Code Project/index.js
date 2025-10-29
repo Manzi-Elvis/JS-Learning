@@ -17,9 +17,9 @@ inquirer
     }
   ])
   .then((answers) => {
-      const url = answers.URL;
-      const qr_svg = qr.image(url);
-    // Use user feedback for... whatever!!
+    const url = answers.URL;
+      console.log(answers)
+      // Use user feedback for... whatever!!
   })
   .catch((error) => {
     if (error.isTtyError) {
