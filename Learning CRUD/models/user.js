@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
-const userSchema = new mongoose.Schema({
-      firstName: { type : String, required: true, trim: true},
-      LastName: { type : String, required: true, trim: true},
-      email: {type: String, required: true, unique: true, lowercase: true },
-      password:{type: String, required: true, trim: true}
-});
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 10);
-  next();
-});
-const User = mongoose.model('User' , userSchema);
 
-module.exports = User
+const userSchema = new mongoose.Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true }
+}, { timestamps: true });
+
+module.exports = mongoose.model('User', userSchema);

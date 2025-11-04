@@ -6,13 +6,13 @@ const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
-// Serve static files (CSS, JS, images) from views folder
-app.use(express.static(path.join(__dirname, 'views')));
-
 // Middlewares
 app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
+
+// Serve static HTML from views
+app.use(express.static(path.join(__dirname, 'views')));
 
 // API Routes
 app.use('/api/users', userRoutes);
