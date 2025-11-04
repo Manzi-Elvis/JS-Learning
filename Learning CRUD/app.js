@@ -1,19 +1,25 @@
+const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
-const userRoutes = require('./routes/userRoutes')
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
-//middlewares
-app.use(express.json())
+// Serve static files (CSS, JS, images) from views folder
+app.use(express.static(path.join(__dirname, 'views')));
+
+// Middlewares
+app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
 
-//routes
-app.use('/api/users' , userRoutes);
+// API Routes
+app.use('/api/users', userRoutes);
 
-// default route
-app.get('/' , (req,res) => {
-      res.send('Welcome to Simple Node.js CRUD API')
+// Default route to serve HTML
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
+
 module.exports = app;
