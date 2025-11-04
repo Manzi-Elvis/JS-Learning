@@ -29,11 +29,11 @@ Each project has its own folder and README explaining:
 Examples:
 
 ```
-📁 HTML-CSS-Projects/
-📁 JavaScript-Mini-Apps/
-📁 Node-Express-Learning/
-📁 React-Experiments/
-📁 Backend-APIs/
+📁 Express Server/
+📁 Learning CRUD/
+📁 Dice game/
+📁 PDF BOOKS/
+📁 HTML&CSS/
 ```
 
 ### 📚 Resources
@@ -85,9 +85,8 @@ This is mainly a personal learning space, but if you have suggestions or resourc
 
 If you’re also learning or want to collaborate on something:
 
-* **GitHub:** [Manzi-Elvis]
-* **LinkedIn:** [https://www.linkedin.com/in/mrelvis]
-* **Email:** [elvismanzi16@gmail.com]
+* **LinkedIn:** https://www.linkedin.com/in/mrelvis
+* **Email:** elvismanzi16@gmail.com
 
 ---
 
